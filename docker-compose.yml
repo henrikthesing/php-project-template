@@ -1,0 +1,45 @@
+version: "3.5"
+
+services:
+  php-project:
+    build: ./config/docker
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www
+    hostname: php-project.local
+    networks:
+      dockerbridge.local:
+        ipv4_address: 192.168.200.10
+        aliases:
+          - php-project.local
+
+  php-project-db:
+    image: mysql:8.0.28
+    ports:
+      - 3307:3306
+    volumes:
+      - ./config/docker/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      dockerbridge.local:
+        ipv4_address: 192.168.200.11
+
+  php-project-mailhog:
+    container_name: mailhog
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      dockerbridge.local:
+        ipv4_address: 192.168.200.25
+
+networks:
+  dockerbridge.local:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.200.0/24

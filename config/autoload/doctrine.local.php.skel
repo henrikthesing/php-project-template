@@ -1,0 +1,16 @@
+<?php
+
+return [
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'params' => [
+                    'host' => '192.168.200.11',
+                    'dbname'      => 'phpproject',
+                    'user'        => 'root',
+                    'password'    => 'root',
+                ],
+            ],
+        ],
+    ],
+];
