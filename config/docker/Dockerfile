@@ -20,6 +20,8 @@ RUN touch /usr/local/etc/php/conf.d/xdebug.ini; \
   echo xdebug.mode=debug >> /usr/local/etc/php/conf.d/xdebug.ini; \
   echo xdebug.start_with_request=yes >> /usr/local/etc/php/conf.d/xdebug.ini; \
   echo xdebug.client_port=9003 >> /usr/local/etc/php/conf.d/xdebug.ini; \
-  echo xdebug.log=/tmp/php8-xdebug.log >> /usr/local/etc/php/conf.d/xdebug.ini;
+  echo xdebug.log=/tmp/php8-xdebug.log >> /usr/local/etc/php/conf.d/xdebug.ini; \
+  echo xdebug.client_host=192.168.200.1 >> /usr/local/etc/php/conf.d/xdebug.ini; \
+  echo xdebug.idekey="DEBUG" >> /usr/local/etc/php/conf.d/xdebug.ini;
 
 WORKDIR /var/www

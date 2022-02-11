@@ -42,3 +42,7 @@ docker-compose exec container-name php public/index.php migrations:migrate
 ```bash
 docker-compose exec container-name bash
 ```
+
+Debugging
+* Server: `localhost:8080`
+* IDE Key (session id): `DEBUG`   
