@@ -10,22 +10,22 @@
     }
   ],
   "require": {
-    "php": "^8.1",
-    "doctrine/doctrine-orm-module": "^5.0.0",
-    "doctrine/migrations": "^3.4.1",
+    "php": "^8.2",
+    "doctrine/doctrine-orm-module": "^5.3",
+    "doctrine/migrations": "^3.5",
     "kokspflanze/zfc-twig": "^4.1",
-    "laminas/laminas-mvc": "^3.3.0",
-    "laminas/laminas-config": "^3.7.0",
-    "laminas/laminas-cli": "^1.4.0",
-    "laminas/laminas-log": "^2.15.0",
-    "laminas/laminas-session": "^2.12.0",
-    "vlucas/phpdotenv": "^v5.4.1",
+    "laminas/laminas-mvc": "^3.6",
+    "laminas/laminas-config": "^3.8",
+    "laminas/laminas-cli": "^1.7",
+    "laminas/laminas-log": "^2.16",
+    "laminas/laminas-session": "^2.16",
+    "vlucas/phpdotenv": "^v5.5",
     "ext-pdo": "*",
     "ext-json": "*"
   },
   "require-dev": {
-    "phpstan/phpstan": "^1.4.4",
-    "phpunit/phpunit": "9.5.13"
+    "phpstan/phpstan": "^1.9",
+    "phpunit/phpunit": "^9.5"
   },
   "autoload": {
     "psr-4": {

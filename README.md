@@ -5,7 +5,6 @@
 - PHP 8.1
 - Doctrine
 - Laminas Framework
-- 
 - PHPStan
 - PHPUnit
 
@@ -40,7 +39,7 @@ docker-compose exec container-name php public/index.php migrations:migrate
 
 (Optional) Jump inside the container.
 ```bash
-docker-compose exec container-name bash
+docker-compose exec -it container-name bash
 ```
 
 Debugging
